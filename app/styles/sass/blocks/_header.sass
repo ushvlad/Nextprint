@@ -1,0 +1,85 @@
+.header
+    display: flex
+    flex-direction: row
+    justify-content: space-between  
+    position: relative
+    align-items: center
+    min-height: 100px
+    padding: 20px 0px 0px 0px
+    width: 100%
+    &__logo
+        width: 160px
+        border: none
+        color: inherit
+        img 
+            width: 100%
+            border: none
+    &__search-wrap
+        .search
+            .fa
+                display: flex
+                position: absolute
+                right: 0
+                bottom: 50%
+                top: 50%
+                color: $blue
+                cursor: pointer
+                text-align: center
+                transition: color .25s ease
+                &:hover
+                    color: lighten($blue, 10%)
+        .search-field
+            position: absolute
+            left: 0
+            top: 100px
+            padding: 15px
+            background-color: lighten($blue, 3%)
+            width: 100%
+            border-top: 1px solid lighten($blue, 5%)
+            z-index: 4
+            display: none
+            input[type=text]
+                width: 100%
+                padding: 8px 15px
+                border: lighten($blue, 10%) 1px solid
+                background-color: $white
+                font-size: 20px
+                color: $blue
+                outline: none
+                &:focus
+                    border: lighten($blue, 15%)
+                &::placeholder
+                    color: rgba($blue, .8)
+                    font-style: italic
+    &__mobile-menu-button
+        position: absolute
+        top: 75%
+        left: 50%
+        margin-right: -50%
+        transform: translate(-50%, -75%)
+        color: $blue
+        text-align: center
+        cursor: pointer
+        line-height: 65px
+        font-size: 20px
+        font-weight: bold
+        white-space: nowrap
+        display: none
+        &:hover
+            color: lighten($blue, 10%)
+
+.mobile-menu
+    display: none
+    text-align: center
+
+
+
+
+                    
+
+
+
+        
+                
+
+

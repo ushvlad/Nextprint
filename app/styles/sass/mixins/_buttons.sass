@@ -1,0 +1,87 @@
+.button 
+    box-shadow: 4px 5px 16px rgba(0, 0, 0, 0.45)
+    background-color: $accent
+    line-height: 20px
+    text-transform: uppercase
+    border: none
+    cursor: pointer
+    position: relative
+    &:hover
+        background-color: lighten($accent, 10%)
+    &_main
+        width: 160px
+        height: 38px
+        padding: 10px 10px 10px 32px
+        a
+            font-size: 12px
+            letter-spacing: 1px
+            font-weight: 600
+            i
+                position: absolute
+                left: 13px
+                top: 10px
+                font-size: 14px
+    &_mobile
+        width: 160px
+        height: 38px
+        top: -50px  
+        a
+            font-size: 12px
+            letter-spacing: 1px
+            font-weight: 600
+            padding: 10px 0px 10px 20px
+            i
+                position: absolute
+                font-size: 14px
+                left: 8%
+    &_promo
+        margin-top: 26px
+        width: 200px
+        height: 38px
+        padding: 10px 10px 10px 32px
+        a
+            font-size: 13px
+            letter-spacing: 1px
+            font-weight: 600
+            i
+                position: absolute
+                left: 14px
+                top: 10px
+                font-size: 16px
+    &_about
+        margin-top: 26px
+        width: 150px
+        height: 38px
+        padding: 10px
+        background-color: lighten($blue, 30%)
+        border-radius: 5px
+        &:hover
+            background-color: lighten($blue, 10%)
+            box-shadow: 4px 5px 16px rgba(0, 0, 0, 0.45)
+            transition: color .25s ease
+        a
+            font-size: 14px
+            letter-spacing: 1px
+            font-style: italic
+            color: $white
+    &_consultation
+        margin-left: auto
+        width: 200px
+        height: 38px
+        padding: 10px 10px 10px 32px
+        background: $blue
+        &:hover
+            background-color: lighten($blue, 10%)
+            box-shadow: 4px 5px 16px rgba(0, 0, 0, 0.45)
+            transition: color .25s ease
+        a
+            font-size: 12px
+            letter-spacing: 1px
+            font-weight: 600
+            color: $white
+            i
+                position: absolute
+                left: 14px
+                top: 10px
+                font-size: 16px
+    
