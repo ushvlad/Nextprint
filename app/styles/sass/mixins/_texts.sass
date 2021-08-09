@@ -1,0 +1,72 @@
+.title
+    position: relative
+    h3
+        color: $blue
+        font-style: italic
+        font-size: 24px
+        line-height: 1.2
+        font-weight: 600
+        text-transform: uppercase
+        letter-spacing: 1px
+        &::before    
+            content: url(../images/dist/favicon.svg)
+            position: absolute
+            left: -35px
+            top: -4px
+            width: 40px
+            height: 40px
+    &_production
+        text-align: center
+        h3
+            &::before
+                left: 396px
+    &_consultation
+        h4
+            font-size: 22px
+            line-height: 1.2
+            font-weight: 700
+            text-transform: uppercase
+            letter-spacing: 1px
+    &_customers
+        text-align: center
+        margin-bottom: 15px
+        h3
+            &::before
+                left: 410px
+    &_equipment
+        text-align: center
+        h3
+            &::before
+                left: 378px
+    &_footer
+        h4
+            color: $white
+            text-transform: uppercase
+            font-size: 17px
+            font-weight: 700
+            margin-bottom: 5px
+
+.text
+    h5
+        margin: 10px 0
+        font-size: 18px
+        font-weight: 700
+    p
+        margin: 8px 0
+    &_production
+        text-align: center
+    &_consultation
+        p
+            font-size: 15px
+            font-weight: 400
+            line-height: 1.2
+            margin: -6px 0      
+    &_equipment
+        text-align: center
+    &_footer
+        color: $white
+        font-size: 13px
+    
+
+
+    

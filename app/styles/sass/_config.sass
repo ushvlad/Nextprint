@@ -1,0 +1,51 @@
+// USER VARIABLES SECTION
+
+$accent: #ffb911 // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$blue: #27357f
+$white: #fff
+$black: #000
+$grad1: #d8dbe2
+$grad2: #ebecf0
+$lineheight: 1.65 // Document Line Height
+$userfont: adelle-oh5, slab-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 10px
+$grid-columns: 12
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: (xs: 300px, sm: 540px, md: 720px, lg: 960px, xl: 1140px)
+
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+
+@import '../../libs/font-awesome/scss/font-awesome.scss'
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('adelle-oh5', normal, 400, '../fonts/AdelleCyrillic.woff2')
+@include font('adelle-oh5', normal, 600, '../fonts/AdelleCyrillic-SemiBold.woff2')
+@include font('adelle-oh5', normal, 700, '../fonts/AdelleCyrillic-Bold.woff2')
+@include font('adelle-oh5', italic, 600, '../fonts/AdelleCyrillic-SemiBoldItalic.woff2')
+@include font('fontawesome', normal, 700, '../fonts/fontawesome-webfont.woff2')
+
+
+
+
+
+
+		

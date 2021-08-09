@@ -1,0 +1,270 @@
+
+/*==========  Desktop First  ==========*/
++media-breakpoint-down(xl)
+    .nav
+        &_main
+            margin-left: 60px
+            li
+                a
+                    margin-right: 5px
+                    font-size: 16px
+        &_submenu
+            width: 300px
+            li
+                a
+                    font-size: 14px
+    .promo
+        &__header
+            font-size: 38px
+    .about
+        &__block
+            padding: 0 $gutter*4
+    .title
+        &_production
+            h3
+                &::before
+                    left: 311px
+        &_customers
+            h3
+                &::before
+                    left: 326px
+        &_equipment
+            h3
+                &::before
+                    left: 288px
+    .item
+        &_heading
+            h4
+                font-size: 20px
+    #make-label
+        font-size: 18px
+    .equipment
+        &_name
+            h4
+                font-size: 20px
+// <1200px
++media-breakpoint-down(lg)
+    #up
+        position: fixed
+        z-index: 10
+        padding: 0 20px
+        top: 0
+        left: 0
+        right: 0
+        height: auto
+        background: $white
+        box-shadow: 4px 5px 16px rgba(0, 0, 0, 0.45)
+        overflow-y: auto
+        max-height: 100%
+    .header
+        &__search-wrap
+            .search
+                .fa
+                    right: 20px
+            .search-field
+                position: fixed
+                z-index: 10
+        &__logo
+            width: 90px
+    .nav_main, .button_main
+        display: none
+    .header__mobile-menu-button
+        display: block
+    .mobile-menu
+        position: fixed
+        z-index: 10
+        left: 30%
+    .button
+        &_main
+            width: 130px
+            padding: 5px 2px 5px 25px
+            a
+                font-size: 10px
+                i
+                    font-size: 12px
+                    left: 10px
+                    top: 11px
+        &_about
+            margin-top: 5px
+            width: 120px
+            a
+                font-size: 12px
+        &_mobile
+            top: -40px
+        &_consultation
+            padding: 5px 2px 5px 25px
+            a
+                font-size: 11px
+                i
+                    font-size: 13px
+                    left: 15px
+                    top: 12px          
+    .promo
+        &__text
+            width: 300px
+    .title
+        h3
+            font-size: 18px
+            &::before 
+                left: -32px
+                top: -4px
+                width: 33px
+                height: 33px
+        &_production
+            h3
+                &::before
+                    left: 227px
+                    top: -5px
+                    width: 33px
+                    height: 33px
+        &_customers
+            h3
+                &::before
+                    left: 238px
+                    top: -5px
+                    width: 33px
+                    height: 33px
+        &_equipment
+            h3
+                &::before
+                    left: 210px
+                    top: -5px
+                    width: 33px
+                    height: 33px
+    .text
+        h5
+            font-size: 14px
+        p
+            font-size: 13px
+    .item
+        img
+            opacity: 0.45
+            transform: scale(1.1)
+        &_inner
+                top: 7%
+                bottom: 7%
+        &_heading
+            h4
+                font-size: 18px
+        &_text
+            opacity: 1
+            transition-delay: .1s
+            padding: 0 5px
+            p
+                font-size: 14px
+    #brend-tea
+        &::before
+            left: -95px
+        &::after
+            right: -95px
+    #tea-box, #flex-label
+        &::before
+            left: -44px
+        &::after
+            right: -44px
+    #make-label
+        &::before
+            left: -20px
+        &::after
+            right: -20px
+    #carton
+        &::before
+            left: -10px
+        &::after
+            right: -10px
+    .equipment
+        &_name
+            h4
+                font-size: 16px
+                color: $white
+        &__item
+            img
+                opacity: 0.45
+                transform: scale(1.1)
+// <992px
++media-breakpoint-down(md)
+    .container
+        max-width: 100%
+    .promo
+        background-position: bottom left
+    .about
+        padding: 20px
+        &__block
+            padding: $gutter*2 0 
+    .delivery
+        padding: 20px
+        &__block
+            padding: $gutter*2 0
+    .production
+        padding: 0 20px
+    .title
+        h3
+            &::before
+                left: -28px
+                top: -4px
+        &_production
+            text-align: left
+            h3
+                &::before
+                    left: -28px
+                    top: -4px
+        &_customers
+            text-align: left
+            h3
+                &::before
+                    left: -32px
+                    top: -4px
+        &_equipment
+            text-align: left
+            h3
+                &::before
+                    left: -30px
+                    top: -4px
+    .customers
+        padding: 30px 60px
+    .text
+        &_production
+            h5
+                text-align: left
+        &_equipment
+            h5
+                text-align: left
+    .consultation
+        &__info
+            padding-left: 0px
+            i
+                display: none
+        .container
+            display: block
+    .button
+        &_consultation
+            padding-left: 20px
+            margin-top: 15px
+            a
+                font-size: 12px
+                i
+                    left: 14px
+                    top: 10px
+                    font-size: 16px
+    .item
+        &_inner
+            top: 20%
+            bottom: 20%
+            border-width: 1px 
+        &_heading
+            transform: translateY(-125%)
+            h4
+                font-size: 16px
+                &::before, &::after
+                    display: none
+    #make-label
+        font-size: 16px
+    .equipment
+        padding: 0 20px
+// <768px
++media-breakpoint-down(sm)
+// <576px 
++media-breakpoint-down(xs)
+    
+
+
