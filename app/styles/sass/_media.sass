@@ -22,16 +22,40 @@
     .title
         &_production
             h3
-                &::before
-                    left: 311px
+                background-position: 36% 20%
         &_customers
             h3
-                &::before
-                    left: 326px
+                background-position: 37% 20%
         &_equipment
             h3
-                &::before
-                    left: 288px
+                background-position: 33% 20%
+        &_switcher
+            h3
+                background-position: 34% 20%
+            &-equipment
+                h3
+                    background-position: 31% 20%
+            &-delivery
+                h3
+                    background-position: 26% 20%
+        &_brand 
+            h3
+                background-position: 19% 20%
+        &_tea 
+            h3
+                background-position: 35% 20%
+        &_label 
+            h3
+                background-position: 38% 20%
+        &_package 
+            h3
+                background-position: 25% 20%
+        &_multi 
+            h3
+                background-position: 16% 20%
+        &_hybrid 
+            h3
+                background-position: 17% 20%
     .item
         &_heading
             h4
@@ -42,6 +66,16 @@
         &_name
             h4
                 font-size: 20px
+    .switcher
+        &-wrap
+            &.active
+                padding: 0 80px
+    #tea-package
+        font-size: 16px
+    #hybrid-materials
+        font-size: 18px
+        p
+            font-size: 16px
 // <1200px
 +media-breakpoint-down(lg)
     #up
@@ -105,32 +139,32 @@
     .title
         h3
             font-size: 18px
-            &::before 
-                left: -32px
-                top: -4px
-                width: 33px
-                height: 33px
+            background-size: 33px
         &_production
             h3
-                &::before
-                    left: 227px
-                    top: -5px
-                    width: 33px
-                    height: 33px
+                background-size: 33px
         &_customers
             h3
-                &::before
-                    left: 238px
-                    top: -5px
-                    width: 33px
-                    height: 33px
+                background-size: 33px
         &_equipment
             h3
-                &::before
-                    left: 210px
-                    top: -5px
-                    width: 33px
-                    height: 33px
+                background-size: 33px
+        &_switcher
+            h3
+                background-size: 33px
+                background-position: 39% 50%
+            &-equipment
+                h3
+                    background-size: 33px
+                    background-position: 37% 50%
+            &-delivery
+                h3
+                    background-size: 33px
+                    background-position: 34% 50% 
+        &_brand
+            h3
+                background-size: 33px
+                background-position: 18% 50% 
     .text
         h5
             font-size: 14px
@@ -181,6 +215,58 @@
             img
                 opacity: 0.45
                 transform: scale(1.1)
+    .switcher
+        padding-top: 100px
+        &-title
+            display: block
+            font-size: 17px
+            margin-bottom: 15px
+            padding-top: 20px
+            margin-top: 0
+        &-wrap
+            position: static
+            z-index: 1
+            padding-top: 0
+            opacity: 1
+            visibility: visible
+            overflow: hidden
+            height: auto
+            &.active
+                padding: 0 
+        &-item
+            flex-direction: column
+            align-items: center
+    .visible-sm
+        display: block!important
+    .brand
+        padding-top: 120px
+        li
+            h5
+                font-size: 18px
+        .fa
+            &::before
+                top: 0
+    .swiper
+        &-container
+            padding-top: 10px
+            padding-bottom: 10px
+        &-button-prev, &-button-next
+            display: none
+        &-pagination
+            display: none
+    #tea-envelope
+        &::before
+            left: -42px
+        &::after
+            right: -42px
+    #tea-package
+        &::before
+            left: -29px
+        &::after
+            right: -29px
+    #multi-film, #hybrid-materials, #milk-label, #laminated-paper
+        font-size: 14px
+
 // <992px
 +media-breakpoint-down(md)
     .container
@@ -199,27 +285,36 @@
         padding: 0 20px
     .title
         h3
-            &::before
-                left: -28px
-                top: -4px
+            background-position: -1% 20%
         &_production
             text-align: left
             h3
-                &::before
-                    left: -28px
-                    top: -4px
+                background-position: -1% 20%
         &_customers
             text-align: left
             h3
-                &::before
-                    left: -32px
-                    top: -4px
+                background-position: -1% 20%
         &_equipment
             text-align: left
             h3
-                &::before
-                    left: -30px
-                    top: -4px
+                background-position: -1% 20%
+        &_switcher
+            text-align: left
+            h3
+                background-position: -1% 20%
+            &-equipment
+                text-align: left
+                h3
+                    background-position: -1% 20%
+            &-delivery
+                text-align: left
+                h3
+                    background-position: -1% 20%
+        &_brand, &_tea, &_label, &_package, &_multi, &_hybrid  
+            text-align: left
+            h3
+                background-position: 0% 40%
+                font-size: 15px
     .customers
         padding: 30px 60px
     .text
@@ -261,6 +356,25 @@
         font-size: 16px
     .equipment
         padding: 0 20px
+    .switcher-item-img
+        width: auto
+        height: auto
+        &-offset
+            width: auto
+            height: auto
+            margin: 0
+    .brand
+        &_text
+            p
+                font-size: 12px
+        li
+            h5
+                font-size: 16px
+        .fa
+            &::before
+                top: -2px
+    #hybrid, #milk
+        bottom: 7%
 // <768px
 +media-breakpoint-down(sm)
 // <576px 

@@ -2,10 +2,12 @@
 import $ from 'jquery'
 window.jQuery = $
 window.$ = $
-// // Import vendor jQuery plugin example (not module)
 
+import Swiper from 'swiper';
+import SwiperCore, { Navigation, Pagination, Autoplay} from 'swiper/core';
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
-
+import { Fancybox, Carousel } from '@fancyapps/ui'
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -39,27 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			$('.mobile-menu').slideUp();
 		}
 	});
-	$('.owl-carousel').owlCarousel({
-		loop:true,
-		margin:5,
-		nav:false,
-		autoplay:true,
-		autoplayTimeout:3000,
-		responsive:{
-			0: {
-				items: 1
-			},
-			768: {
-				items: 3
-			},
-			992: {
-				items: 4,
-			},
-			1200: {
-				items: 6
-			}
-		}
-	});
 	//Modal
 	$('[data-modal=consultation]').on('click', function() {
         $('.overlay, #consultation').fadeIn('slow');
@@ -67,37 +48,52 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.modal__close').on('click', function() {
         $('.overlay, #consultation').fadeOut('slow');
     });
+	$(document).on( "mouseup", function(e) {
+		var block = $('#consultation');
+		if (!block.is(e.target) && block.has(e.target).length === 0) {
+			$('.overlay, #consultation').fadeOut('slow');
+		}
+	}).on( "keyup", function(e) {
+		if (e.key == "Escape") {
+			$('.overlay, #consultation').fadeOut('slow');
+		}
+	});
 
-    function validateForms(form){
-        $(form).validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 2
-                },
-                phone: "required",
-                email: {
-                    required: true,
-                    email: true
-                }
-            },
-            messages: {
-                name: {
-                    required: "Пожалуйста, введите свое имя",
-                    minlength: jQuery.validator.format("Введите {0} символа!")
-                  },
-                phone: "Пожалуйста, введите свой номер телефона",
-                email: {
-                  required: "Пожалуйста, введите свою почту",
-                  email: "Неправильно введен адрес почты"
-                }
-            }
-        });
-    };
+    $('#consultation form').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2
+			},
+			phone: "required",
+			email: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+			name: {
+				required: "Пожалуйста, введите свое имя",
+				minlength: jQuery.validator.format("Введите {0} символа!")
+			  },
+			phone: "Пожалуйста, введите свой номер телефона",
+			email: {
+			  required: "Пожалуйста, введите свою почту",
+			  email: "Неправильно введен адрес почты"
+			}
+		}
+	});
 	
-    validateForms('#consultation form');
+    $('.phone-number').mask("+7 (999) 999-99-99");
 
-    $('input[name=phone]').mask("+7 (999) 999-99-99");
+	$(".top").on('click', function() {
+        $("html, body").stop().animate({
+            scrollTop: 0
+        }, "500", "swing")
+    });
+    $(window).on('scroll', function() {
+        $(this).scrollTop() > $(window).height() ? $(".top").addClass("active") : $(".top").removeClass("active")
+    });
 
     $('form').on('submit', function(e) {
         e.preventDefault();
@@ -114,4 +110,85 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         return false;
     });
+	$(document).on('click', 'ul.switcher-tab li:not(.active)', function() {
+		$(this).addClass('active').siblings().removeClass('active');
+		$('.switcher-wrap').eq($(this).index()).addClass('active').siblings().removeClass('active');
+	});
+	$(document).on("click", "div.switcher-wrap div.switcher-title:not(.active)", function() {
+		var block = $(this).parent("div.switcher-wrap");
+		if (!block.hasClass("active")) {
+			$("div.switcher-content", block).slideDown(200, function() {
+				block.addClass("active")
+			})
+		} else {
+			$("div.switcher-content", block).slideUp(200, function() {
+				block.removeClass("active")
+			})
+		}
+	});
+	const swiperCustomer = new Swiper(".myCustomers", {
+		slidesPerView: 6,
+        spaceBetween: 5,
+		loop: true,
+		loopFillGroupWithBlank: false,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+				slidesPerGroup: 1,
+			},
+			768: {
+				slidesPerView: 3,
+				slidesPerGroup: 3,
+			},
+			992: {
+				slidesPerView: 4,
+				slidesPerGroup: 4,
+			},
+			1200: {
+				slidesPerView: 6,
+			},
+		},
+    });
+	const swiperItem = new Swiper(".mySwiper", {
+		slidesPerView: 3,
+		spaceBetween: 20,
+		slidesPerGroup: 3,
+		loop: true,
+		loopFillGroupWithBlank: false,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+			  slidesPerView: 1,
+			  spaceBetween: 20,
+			  slidesPerGroup: 1,
+			},
+			768: {
+			  slidesPerView: 2,
+			  spaceBetween: 30,
+			  slidesPerGroup: 2,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				slidesPerGroup: 3,
+			},
+		},
+    });
+  // Customize Fancybox
+  	Fancybox.bind('[data-fancybox="gallery"]', {
+		Thumbs: false,
+		Toolbar: false,
+		closeButton: "top",
+	});
 })

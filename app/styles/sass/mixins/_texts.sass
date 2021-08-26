@@ -8,18 +8,15 @@
         font-weight: 600
         text-transform: uppercase
         letter-spacing: 1px
-        &::before    
-            content: url(../images/dist/favicon.svg)
-            position: absolute
-            left: -35px
-            top: -4px
-            width: 40px
-            height: 40px
+        padding: 5px 0 0 30px
+        background-image: url("../images/dist/favicon.svg")
+        background-repeat: no-repeat
+        background-position: -1% 60%
+        background-size: 40px
     &_production
         text-align: center
         h3
-            &::before
-                left: 396px
+            background-position: 38% 20%
     &_consultation
         h4
             font-size: 22px
@@ -31,13 +28,11 @@
         text-align: center
         margin-bottom: 15px
         h3
-            &::before
-                left: 410px
+            background-position: 39% 20%
     &_equipment
         text-align: center
         h3
-            &::before
-                left: 378px
+            background-position: 36% 20%
     &_footer
         h4
             color: $white
@@ -45,7 +40,42 @@
             font-size: 17px
             font-weight: 700
             margin-bottom: 5px
-
+    &_switcher
+        text-align: center
+        h3
+            background-position: 38% 20%
+        &-equipment
+            text-align: center
+            h3
+                background-position: 37% 20%  
+        &-delivery
+            text-align: center
+            h3
+                background-position: 33% 20%  
+    &_brand 
+        text-align: center
+        h3
+            background-position: 24% 20%
+    &_tea 
+        text-align: center
+        h3
+            background-position: 37% 20%
+    &_label 
+        text-align: center
+        h3
+            background-position: 40% 20%
+    &_package 
+        text-align: center
+        h3
+            background-position: 29% 20%
+    &_multi 
+        text-align: center
+        h3
+            background-position: 22% 20%
+    &_hybrid
+        text-align: center
+        h3
+            background-position: 23% 20%
 .text
     h5
         margin: 10px 0
