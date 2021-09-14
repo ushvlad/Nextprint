@@ -9,6 +9,9 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 import { Fancybox, Carousel } from '@fancyapps/ui'
 
+require('~/app/libs/jquery.validate.js')
+require('~/app/libs/jquery.maskedinput.js')
+
 document.addEventListener('DOMContentLoaded', () => {
 
 	$( '.search' ).on( "click", function() {
@@ -191,4 +194,5 @@ document.addEventListener('DOMContentLoaded', () => {
 		Toolbar: false,
 		closeButton: "top",
 	});
+	
 })

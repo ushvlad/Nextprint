@@ -23,7 +23,7 @@
         &_production
             h3
                 background-position: 36% 20%
-        &_customers
+        &_customers, &_dry
             h3
                 background-position: 37% 20%
         &_equipment
@@ -56,6 +56,27 @@
         &_hybrid 
             h3
                 background-position: 17% 20%
+        &_laminate 
+            h3
+                background-position: 29% 20%
+        &_make 
+            h3
+                background-position: 30% 20%
+        &_sticky  
+            h3
+                background-position: 28% 20%
+        &_shrink
+            h3
+                background-position: 27% 20%
+        &_package-carton
+            h3
+                background-position: 32% 20%
+        &_cardboard
+            h3
+                background-position: 21% 20%
+        &_contact
+            h3
+                background-position: 41% 20%
     .item
         &_heading
             h4
@@ -70,12 +91,27 @@
         &-wrap
             &.active
                 padding: 0 80px
+    .brand
+        &_text
+            p
+                font-size: 14px
     #tea-package
         font-size: 16px
+    #multi-film
+        &::before
+            left: -80px
+        &::after
+            right: -80px
     #hybrid-materials
-        font-size: 18px
-        p
-            font-size: 16px
+        &::before
+            left: -70px
+        &::after
+            right: -70px
+    #laminated-paper
+        &::before
+            left: -40px
+        &::after
+            right: -40px
 // <1200px
 +media-breakpoint-down(lg)
     #up
@@ -246,6 +282,9 @@
         .fa
             &::before
                 top: 0
+        &_text
+            p
+                font-size: 13px
     .swiper
         &-container
             padding-top: 10px
@@ -266,6 +305,48 @@
             right: -29px
     #multi-film, #hybrid-materials, #milk-label, #laminated-paper
         font-size: 14px
+    #multi-film
+        &::before
+            left: -85px
+        &::after
+            right: -85px
+    #hybrid-materials
+        &::before
+            left: -75px
+        &::after
+            right: -75px
+    #laminated-paper
+        &::before
+            left: -50px
+        &::after
+            right: -50px
+    #cardboard
+        font-size: 16px
+        &::before
+            left: -45px
+        &::after
+            right: -45px
+    .contact
+        padding-top: 120px
+        &__address, &__telephone
+            width: 192px
+            font-size: 13px
+        &__address
+            i
+                font-size: 26px
+                top: 14px
+        &__telephone
+            margin: 10px 0
+        &__phone
+            i
+                top: 3px
+                font-size: 22px
+        &__social
+            li
+                a
+                    width: 40px
+                    height: 40px
+                    font-size: 22px
 
 // <992px
 +media-breakpoint-down(md)
@@ -310,7 +391,7 @@
                 text-align: left
                 h3
                     background-position: -1% 20%
-        &_brand, &_tea, &_label, &_package, &_multi, &_hybrid  
+        &_brand, &_tea, &_label, &_package, &_multi, &_hybrid, &_laminate, &_make, &_dry, &_sticky, &_shrink, &_package-carton, &_cardboard, &_contact
             text-align: left
             h3
                 background-position: 0% 40%
@@ -373,8 +454,20 @@
         .fa
             &::before
                 top: -2px
-    #hybrid, #milk
+    #hybrid
         bottom: 7%
+    #multi-film, #hybrid-materials, #milk-label, #laminated-paper
+        font-size: 14px
+    .contact
+        &__info
+            width: 220px
+            position: relative
+            padding: 10px
+        &__block
+            padding-top: 5px
+            display: flex
+            flex-direction: column
+            align-items: center
 // <768px
 +media-breakpoint-down(sm)
 // <576px 

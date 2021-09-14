@@ -29,7 +29,7 @@ function browsersync() {
 		ghostMode: { clicks: false },
 		notify: false,
 		online: true,
-		tunnel: 'next-on-print-8-800-555-35-35', // Attempt to use the URL https://yousutename.loca.lt
+		// tunnel: 'next-on-print-8-800-555-35-35', // Attempt to use the URL https://yousutename.loca.lt
 	})
 }
 
